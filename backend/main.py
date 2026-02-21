@@ -1,11 +1,11 @@
 """ Importar módulos necesarios """
-from flask import flask, jsonify, request
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 import mysql.connector
 
 
 """ Crear app flask """
-app = flask(__name__)
+app = Flask(__name__)
 CORS(app)
 
 
@@ -44,6 +44,6 @@ def actualizar_developers(id):
     return jsonify({"mensaje" : "Producto actualizado"})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
     
 
